@@ -1,0 +1,629 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		011E40E51A210EE3007743D0 /* current.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011E40E41A210EE3007743D0 /* current.swift */; };
+		280862561AD6F22A006F9DA5 /* Flat Weather WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = 280862551AD6F229006F9DA5 /* Flat Weather WatchKit App.app */; };
+		28239A781A1D5272006B3BAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28239A771A1D5272006B3BAF /* AppDelegate.swift */; };
+		28239A7A1A1D5272006B3BAF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28239A791A1D5272006B3BAF /* ViewController.swift */; };
+		28239A7D1A1D5272006B3BAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28239A7B1A1D5272006B3BAF /* Main.storyboard */; };
+		28239A7F1A1D5272006B3BAF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28239A7E1A1D5272006B3BAF /* Images.xcassets */; };
+		28239A821A1D5272006B3BAF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28239A801A1D5272006B3BAF /* LaunchScreen.xib */; };
+		6696C80620521555005465A4 /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6696C80520521555005465A4 /* keys.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		280862571AD6F22A006F9DA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 28239A6A1A1D5272006B3BAF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 280862541AD6F229006F9DA5;
+			remoteInfo = "Flat Weather WatchKit App";
+		};
+		28239A881A1D5272006B3BAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 28239A6A1A1D5272006B3BAF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 28239A711A1D5272006B3BAF;
+			remoteInfo = "Flat Weather";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2808626A1AD6F22A006F9DA5 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		011E40E41A210EE3007743D0 /* current.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = current.swift; sourceTree = "<group>"; };
+		280862481AD6F229006F9DA5 /* Flat Weather WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Flat Weather WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		280862551AD6F229006F9DA5 /* Flat Weather WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flat Weather WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		28239A721A1D5272006B3BAF /* Flat Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flat Weather.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		28239A761A1D5272006B3BAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28239A771A1D5272006B3BAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		28239A791A1D5272006B3BAF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		28239A7C1A1D5272006B3BAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		28239A7E1A1D5272006B3BAF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		28239A811A1D5272006B3BAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		28239A871A1D5272006B3BAF /* Flat WeatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Flat WeatherTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6696C80520521555005465A4 /* keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		280862451AD6F229006F9DA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28239A6F1A1D5272006B3BAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28239A841A1D5272006B3BAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		28239A691A1D5272006B3BAF = {
+			isa = PBXGroup;
+			children = (
+				28239A741A1D5272006B3BAF /* Flat Weather */,
+				28239A731A1D5272006B3BAF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		28239A731A1D5272006B3BAF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				28239A721A1D5272006B3BAF /* Flat Weather.app */,
+				28239A871A1D5272006B3BAF /* Flat WeatherTests.xctest */,
+				280862481AD6F229006F9DA5 /* Flat Weather WatchKit Extension.appex */,
+				280862551AD6F229006F9DA5 /* Flat Weather WatchKit App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		28239A741A1D5272006B3BAF /* Flat Weather */ = {
+			isa = PBXGroup;
+			children = (
+				28239A771A1D5272006B3BAF /* AppDelegate.swift */,
+				28239A791A1D5272006B3BAF /* ViewController.swift */,
+				011E40E41A210EE3007743D0 /* current.swift */,
+				28239A7B1A1D5272006B3BAF /* Main.storyboard */,
+				28239A7E1A1D5272006B3BAF /* Images.xcassets */,
+				28239A801A1D5272006B3BAF /* LaunchScreen.xib */,
+				28239A751A1D5272006B3BAF /* Supporting Files */,
+			);
+			path = "Flat Weather";
+			sourceTree = "<group>";
+		};
+		28239A751A1D5272006B3BAF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				28239A761A1D5272006B3BAF /* Info.plist */,
+				6696C80520521555005465A4 /* keys.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		280862471AD6F229006F9DA5 /* Flat Weather WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 280862691AD6F22A006F9DA5 /* Build configuration list for PBXNativeTarget "Flat Weather WatchKit Extension" */;
+			buildPhases = (
+				280862441AD6F229006F9DA5 /* Sources */,
+				280862451AD6F229006F9DA5 /* Frameworks */,
+				280862461AD6F229006F9DA5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				280862581AD6F22A006F9DA5 /* PBXTargetDependency */,
+			);
+			name = "Flat Weather WatchKit Extension";
+			productName = "Flat Weather WatchKit Extension";
+			productReference = 280862481AD6F229006F9DA5 /* Flat Weather WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		280862541AD6F229006F9DA5 /* Flat Weather WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 280862681AD6F22A006F9DA5 /* Build configuration list for PBXNativeTarget "Flat Weather WatchKit App" */;
+			buildPhases = (
+				280862531AD6F229006F9DA5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Flat Weather WatchKit App";
+			productName = "Flat Weather WatchKit App";
+			productReference = 280862551AD6F229006F9DA5 /* Flat Weather WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
+		28239A711A1D5272006B3BAF /* Flat Weather */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28239A911A1D5272006B3BAF /* Build configuration list for PBXNativeTarget "Flat Weather" */;
+			buildPhases = (
+				28239A6E1A1D5272006B3BAF /* Sources */,
+				28239A6F1A1D5272006B3BAF /* Frameworks */,
+				28239A701A1D5272006B3BAF /* Resources */,
+				2808626A1AD6F22A006F9DA5 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Flat Weather";
+			productName = "Flat Weather";
+			productReference = 28239A721A1D5272006B3BAF /* Flat Weather.app */;
+			productType = "com.apple.product-type.application";
+		};
+		28239A861A1D5272006B3BAF /* Flat WeatherTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28239A941A1D5272006B3BAF /* Build configuration list for PBXNativeTarget "Flat WeatherTests" */;
+			buildPhases = (
+				28239A831A1D5272006B3BAF /* Sources */,
+				28239A841A1D5272006B3BAF /* Frameworks */,
+				28239A851A1D5272006B3BAF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				28239A891A1D5272006B3BAF /* PBXTargetDependency */,
+			);
+			name = "Flat WeatherTests";
+			productName = "Flat WeatherTests";
+			productReference = 28239A871A1D5272006B3BAF /* Flat WeatherTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		28239A6A1A1D5272006B3BAF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftMigration = 0710;
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Erica Nico/Tunds";
+				TargetAttributes = {
+					280862471AD6F229006F9DA5 = {
+						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = G4TUEEJMQJ;
+						LastSwiftMigration = 0830;
+					};
+					280862541AD6F229006F9DA5 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					28239A711A1D5272006B3BAF = {
+						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = W46X36CSH7;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+					};
+					28239A861A1D5272006B3BAF = {
+						CreatedOnToolsVersion = 6.1;
+						LastSwiftMigration = 0830;
+						TestTargetID = 28239A711A1D5272006B3BAF;
+					};
+				};
+			};
+			buildConfigurationList = 28239A6D1A1D5272006B3BAF /* Build configuration list for PBXProject "Flat Weather" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 28239A691A1D5272006B3BAF;
+			productRefGroup = 28239A731A1D5272006B3BAF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				28239A711A1D5272006B3BAF /* Flat Weather */,
+				28239A861A1D5272006B3BAF /* Flat WeatherTests */,
+				280862471AD6F229006F9DA5 /* Flat Weather WatchKit Extension */,
+				280862541AD6F229006F9DA5 /* Flat Weather WatchKit App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		280862461AD6F229006F9DA5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				280862561AD6F22A006F9DA5 /* Flat Weather WatchKit App.app in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		280862531AD6F229006F9DA5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28239A701A1D5272006B3BAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6696C80620521555005465A4 /* keys.plist in Resources */,
+				28239A7D1A1D5272006B3BAF /* Main.storyboard in Resources */,
+				28239A821A1D5272006B3BAF /* LaunchScreen.xib in Resources */,
+				28239A7F1A1D5272006B3BAF /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28239A851A1D5272006B3BAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		280862441AD6F229006F9DA5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28239A6E1A1D5272006B3BAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28239A7A1A1D5272006B3BAF /* ViewController.swift in Sources */,
+				011E40E51A210EE3007743D0 /* current.swift in Sources */,
+				28239A781A1D5272006B3BAF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28239A831A1D5272006B3BAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		280862581AD6F22A006F9DA5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 280862541AD6F229006F9DA5 /* Flat Weather WatchKit App */;
+			targetProxy = 280862571AD6F22A006F9DA5 /* PBXContainerItemProxy */;
+		};
+		28239A891A1D5272006B3BAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 28239A711A1D5272006B3BAF /* Flat Weather */;
+			targetProxy = 28239A881A1D5272006B3BAF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		28239A7B1A1D5272006B3BAF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				28239A7C1A1D5272006B3BAF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		28239A801A1D5272006B3BAF /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				28239A811A1D5272006B3BAF /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		280862641AD6F22A006F9DA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Flat Weather WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		280862651AD6F22A006F9DA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				INFOPLIST_FILE = "Flat Weather WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		280862661AD6F22A006F9DA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = Flat_Weather_WatchKit_Extension;
+				INFOPLIST_FILE = "Flat Weather WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		280862671AD6F22A006F9DA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COPY_PHASE_STRIP = NO;
+				IBSC_MODULE = Flat_Weather_WatchKit_Extension;
+				INFOPLIST_FILE = "Flat Weather WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
+		28239A8F1A1D5272006B3BAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		28239A901A1D5272006B3BAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		28239A921A1D5272006B3BAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: erica roy (4Y399CPQY2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = W46X36CSH7;
+				INFOPLIST_FILE = "Flat Weather/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.ericanico.$(PRODUCT_NAME:rfc1034identifier)1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		28239A931A1D5272006B3BAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: erica roy (4Y399CPQY2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = W46X36CSH7;
+				INFOPLIST_FILE = "Flat Weather/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "me.ericanico.$(PRODUCT_NAME:rfc1034identifier)1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		28239A951A1D5272006B3BAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Flat WeatherTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Flat Weather.app/Flat Weather";
+			};
+			name = Debug;
+		};
+		28239A961A1D5272006B3BAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Flat WeatherTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Flat Weather.app/Flat Weather";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		280862681AD6F22A006F9DA5 /* Build configuration list for PBXNativeTarget "Flat Weather WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				280862661AD6F22A006F9DA5 /* Debug */,
+				280862671AD6F22A006F9DA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		280862691AD6F22A006F9DA5 /* Build configuration list for PBXNativeTarget "Flat Weather WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				280862641AD6F22A006F9DA5 /* Debug */,
+				280862651AD6F22A006F9DA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28239A6D1A1D5272006B3BAF /* Build configuration list for PBXProject "Flat Weather" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28239A8F1A1D5272006B3BAF /* Debug */,
+				28239A901A1D5272006B3BAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28239A911A1D5272006B3BAF /* Build configuration list for PBXNativeTarget "Flat Weather" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28239A921A1D5272006B3BAF /* Debug */,
+				28239A931A1D5272006B3BAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28239A941A1D5272006B3BAF /* Build configuration list for PBXNativeTarget "Flat WeatherTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28239A951A1D5272006B3BAF /* Debug */,
+				28239A961A1D5272006B3BAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 28239A6A1A1D5272006B3BAF /* Project object */;
+}
