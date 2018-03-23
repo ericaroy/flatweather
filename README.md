@@ -1,29 +1,17 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
-
-### What is this repository for? ###
-
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+This is a simple weather application utilizing the Dark Sky [API](https://darksky.net/dev). It only showcases the local weather for your current city. Flat Weather also demonstrates the following: REST API consumption, Local Notifications, Geolocation..more to come
 
 ### How do I get set up? ###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+* Head over to Dark Sky's website and register for a developer account. 
+* Grab your Secret Key
+* Generate your own PLIST to add your personal API Key.
 
-### Contribution guidelines ###
+
+### TODO ###
 
 * Writing tests
-* Code review
-* Other guidelines
+* Add better graphics
+* Add things to do according to weather
 
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
