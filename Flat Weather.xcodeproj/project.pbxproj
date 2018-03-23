@@ -14,6 +14,8 @@
 		28239A7D1A1D5272006B3BAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28239A7B1A1D5272006B3BAF /* Main.storyboard */; };
 		28239A7F1A1D5272006B3BAF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28239A7E1A1D5272006B3BAF /* Images.xcassets */; };
 		28239A821A1D5272006B3BAF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28239A801A1D5272006B3BAF /* LaunchScreen.xib */; };
+		668552A72065575F00C30404 /* Geizer.otf in Resources */ = {isa = PBXBuildFile; fileRef = 668552A62065575D00C30404 /* Geizer.otf */; };
+		668552A92065583200C30404 /* MODERNA_.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 668552A82065583200C30404 /* MODERNA_.TTF */; };
 		6696C80620521555005465A4 /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6696C80520521555005465A4 /* keys.plist */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +61,8 @@
 		28239A7E1A1D5272006B3BAF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		28239A811A1D5272006B3BAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		28239A871A1D5272006B3BAF /* Flat WeatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Flat WeatherTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		668552A62065575D00C30404 /* Geizer.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Geizer.otf; sourceTree = "<group>"; };
+		668552A82065583200C30404 /* MODERNA_.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = MODERNA_.TTF; sourceTree = "<group>"; };
 		6696C80520521555005465A4 /* keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,6 +127,8 @@
 		28239A751A1D5272006B3BAF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				668552A62065575D00C30404 /* Geizer.otf */,
+				668552A82065583200C30404 /* MODERNA_.TTF */,
 				28239A761A1D5272006B3BAF /* Info.plist */,
 				6696C80520521555005465A4 /* keys.plist */,
 			);
@@ -275,7 +281,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6696C80620521555005465A4 /* keys.plist in Resources */,
+				668552A72065575F00C30404 /* Geizer.otf in Resources */,
 				28239A7D1A1D5272006B3BAF /* Main.storyboard in Resources */,
+				668552A92065583200C30404 /* MODERNA_.TTF in Resources */,
 				28239A821A1D5272006B3BAF /* LaunchScreen.xib in Resources */,
 				28239A7F1A1D5272006B3BAF /* Images.xcassets in Resources */,
 			);
@@ -454,7 +462,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -493,7 +501,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -510,7 +518,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = W46X36CSH7;
 				INFOPLIST_FILE = "Flat Weather/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.ericanico.$(PRODUCT_NAME:rfc1034identifier)1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -529,7 +537,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = W46X36CSH7;
 				INFOPLIST_FILE = "Flat Weather/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "me.ericanico.$(PRODUCT_NAME:rfc1034identifier)1";
 				PRODUCT_NAME = "$(TARGET_NAME)";

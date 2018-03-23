@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreLocation
+import UserNotifications
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
 	
@@ -25,6 +26,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 	@IBOutlet weak var tempMax: UILabel!
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     
+    @IBOutlet weak var currentSummary: UILabel!
     @IBOutlet weak var ozoneText: UILabel!
     @IBOutlet weak var ozoneLabel: UIView!
   
@@ -35,7 +37,27 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 override func viewDidLoad() {
 		
     super.viewDidLoad()
+    
+     //Save for later, put in own function to switch between right now its showing snow
+    let emitterLayer = CAEmitterLayer()
+    
+    emitterLayer.emitterPosition = CGPoint(x: -5, y: 20)
+    
+    let cell = CAEmitterCell()
+    cell.birthRate = 5
+    cell.lifetime = 10
+    cell.velocity = 50
+    cell.scale = 0.05
+    
+    cell.emissionRange = CGFloat.pi * 2.0
+    cell.contents = UIImage(named: "snow.png")!.cgImage
+    
+    emitterLayer.emitterCells = [cell]
+    
+    view.layer.addSublayer(emitterLayer)
+ 
     initLocation()
+    
   
     
  
@@ -68,8 +90,7 @@ func initLocation(){
         locationManager.distanceFilter = 1000
         locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
-        loadingIndicator.isHidden = false
-        loadingIndicator.startAnimating()
+    
       
  
     
@@ -92,14 +113,14 @@ func locationManager(_ manager: CLLocationManager, didUpdateLocations locations:
 
         if (location.horizontalAccuracy > 0) {
       
-        
+        self.userLong = (location.coordinate.longitude)
         self.userLat = (location.coordinate.latitude)
         //remove space silly
         self.userLocation = "\(location.coordinate.latitude),\(location.coordinate.longitude)"
+        print(userLocation)
         getCurrentWeatherData(userLocation)
         locationManager.stopUpdatingLocation()
-        loadingIndicator.isHidden = true
-        loadingIndicator.stopAnimating()
+
             CLGeocoder().reverseGeocodeLocation(location, completionHandler: {(placemarks, error) -> Void in
 							
                 
@@ -134,8 +155,7 @@ func locationManager(_ manager: CLLocationManager, didFailWithError error: Error
             style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
         locationManager.stopUpdatingLocation()
-        loadingIndicator.isHidden = true
-        loadingIndicator.stopAnimating()
+
         
     }
 
@@ -146,8 +166,7 @@ func locationManager(_ manager: CLLocationManager, didFailWithError error: Error
             style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
         locationManager.stopUpdatingLocation()
-        loadingIndicator.isHidden = true
-        loadingIndicator.stopAnimating()
+
     
     
 }
@@ -158,6 +177,7 @@ func locationManager(_ manager: CLLocationManager, didFailWithError error: Error
     {
         var skyKey = ""
         //should probably cache this
+        
         
         let path = Bundle.main.path(forResource: "keys", ofType: "plist")
         let keys = NSDictionary(contentsOfFile: path!)
@@ -190,13 +210,15 @@ func locationManager(_ manager: CLLocationManager, didFailWithError error: Error
                 DispatchQueue.main.async {
                     // Update UI
                     
-                    currentWeather.temperature
-                    self.tempLabel.text = "\(String(describing: currentWeather.temperature!))"
-                        
+                    self.tempLabel.text = "\(Int(currentWeather.temperature!))"
+                    self.currentSummary.text = "\(currentWeather.todaySummary!)"
+                  
                  
                     self.iconView.image = currentWeather.icon!
-                    self.currentTimeLabel.text = "At \(currentWeather.currentTime!) is"
+                    self.currentTimeLabel.text = "\(currentWeather.currentTime!)"
                     
+                    
+                    /*
                     switch currentWeather.ozone {
                     case 0...50:
                         print("Nice")
@@ -226,6 +248,7 @@ func locationManager(_ manager: CLLocationManager, didFailWithError error: Error
                         print("blah")
                     }
                     print(currentWeather.ozone)
+                    */
                 }
                 
             
@@ -237,12 +260,28 @@ func locationManager(_ manager: CLLocationManager, didFailWithError error: Error
             }
         }
         task.resume()
-        loadingIndicator.isHidden = false
-        loadingIndicator.startAnimating()
+     
     }
 
     
     //end function
+    
+    
+    func registerMessage() {
+        
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert, .sound, .badge]) { (granted, error) in
+            // Enable or disable features based on authorization.
+        }
+    }
+    
+    func scheduleMessage() {
+        
+    }
+    
+    //Change Background Image depending on temp
+    //
+    //Add Things to Do according to temp
 }
 
 

@@ -2,12 +2,13 @@
 //  current.swift
 //  Flat Weather
 //
-//  Created by Erica Roy on 11/22/14.
-//  Copyright (c) 2014 Erica Roy. All rights reserved.
+//  Created by Erica Roy on 03/23/18.
+//  Copyright (c) 2018 Erica Roy. All rights reserved.
 //
 
 import Foundation
 import UIKit
+
 
 struct Current {
     
@@ -16,15 +17,21 @@ struct Current {
 	var currentAlert : String?
     var icon: UIImage?
     var ozone: Float
+    var uvindex: Int
+    var todaySummary: String?
+
 
    
     
     init(weatherDictionary: NSDictionary){
 			
         let currentWeather: NSDictionary = weatherDictionary["currently"] as! NSDictionary
+        
         temperature = currentWeather["temperature"] as? Float
         ozone = currentWeather["ozone"]as! Float
-        print(ozone)
+        uvindex = currentWeather["uvIndex"] as! Int
+        todaySummary = currentWeather["summary"] as! String
+        
         //icon = currentWeather["icon"] as String
         let currentTimeIntValue = currentWeather["time"] as! Int
         currentTime = dateStringFromUnixTime(unixTime: currentTimeIntValue)
@@ -75,9 +82,9 @@ struct Current {
 		switch stringIcon
 		{
 		case "clear-day":
-			imageName = "clear-day"
+			imageName = "clear"
 		case "clear-night":
-			imageName = "clear-night"
+			imageName = "nt_clear"
 		case "rain":
 			imageName = "rain"
 		case "snow":
@@ -91,9 +98,9 @@ struct Current {
 		case "cloudy":
 			imageName = "cloudy"
 		case "partly-cloudy-day":
-			imageName = "partly-cloudy"
+			imageName = "partlycloudy"
 		case "partly-cloudy-night":
-			imageName = "cloudy-night"
+			imageName = "nt_partlycloudy"
 		default:
 			imageName = "default"
 		
@@ -105,7 +112,5 @@ struct Current {
 		let iconName = UIImage(named: imageName)
 		return iconName!
 	}
-
-
 
 }
