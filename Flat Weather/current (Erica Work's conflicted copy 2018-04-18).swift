@@ -16,7 +16,6 @@ struct Current {
     var temperature: Float?
 	var currentAlert : String?
     var icon: UIImage?
-    var ozone: Float
     var uvindex: Int
     var todaySummary: String?
 
@@ -26,19 +25,17 @@ struct Current {
     init(weatherDictionary: NSDictionary){
 			
         let currentWeather: NSDictionary = weatherDictionary["currently"] as! NSDictionary
-        let value = weatherDictionary["daily"] as! NSDictionary
-        print((value["data"]! as! AnyObject).value(forKey:"summary"))
-        print(value["data"]! as! AnyObject)
-       
-            
       
         
         temperature = currentWeather["temperature"] as? Float
-        ozone = currentWeather["ozone"]as! Float
         uvindex = currentWeather["uvIndex"] as! Int
-        todaySummary = currentWeather["summary"] as? String
+        todaySummary = currentWeather["summary"] as! String
        
-    
+     
+        
+        
+   
+      
         
         //icon = currentWeather["icon"] as String
         let currentTimeIntValue = currentWeather["time"] as! Int

@@ -101,9 +101,9 @@ func initLocation(){
         print("not enabled")
         let alert = UIAlertController(title: "Location Services Disabled",
             message: "Please enable Location Services",
-            preferredStyle: UIAlertController.Style.alert)
+            preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "OK",
-                                          style: UIAlertAction.Style.default, handler: nil))
+            style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         
     }
@@ -151,7 +151,7 @@ func locationManager(_ manager: CLLocationManager, didFailWithError error: Error
         
         let alert = UIAlertController(title: "Denied",
             message: "Permission Denied, please enable location services",
-            preferredStyle: UIAlertController.Style.alert)
+            preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "OK",
             style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
@@ -205,7 +205,7 @@ func locationManager(_ manager: CLLocationManager, didFailWithError error: Error
             do {
                 let weatherDictionary  = try JSONSerialization.jsonObject(with: dataObject, options: []) as! NSDictionary
                 //print out the json response
-               // print(weatherDictionary)
+                print(weatherDictionary)
                 
                 let currentWeather = Current(weatherDictionary: weatherDictionary)
                // print("Printing \(currentWeather)")

@@ -8,7 +8,6 @@
 
 import UIKit
 import CoreLocation
-import UserNotifications
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
 	
@@ -26,39 +25,18 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 	@IBOutlet weak var tempMax: UILabel!
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     
-    @IBOutlet weak var currentSummary: UILabel!
     @IBOutlet weak var ozoneText: UILabel!
     @IBOutlet weak var ozoneLabel: UIView!
-  
-
-    
+    //place your own apiKey
+	//fileprivate let apiKey = "d1a6d055d724f4cb904fd1c36401816e"
+    //Should probably put this in another file
+    fileprivate let apiKey = "093da594256ffdd08585fc8ff102328a"
 	
 
 override func viewDidLoad() {
 		
     super.viewDidLoad()
-    
-     //Save for later, put in own function to switch between right now its showing snow
-    let emitterLayer = CAEmitterLayer()
-    
-    emitterLayer.emitterPosition = CGPoint(x: -5, y: 20)
-    
-    let cell = CAEmitterCell()
-    cell.birthRate = 5
-    cell.lifetime = 10
-    cell.velocity = 50
-    cell.scale = 0.05
-    
-    cell.emissionRange = CGFloat.pi * 2.0
-    cell.contents = UIImage(named: "raindrop.png")!.cgImage
-    
-    emitterLayer.emitterCells = [cell]
-    
-    view.layer.addSublayer(emitterLayer)
-    registerMessage()
- 
     initLocation()
-    
   
     
  
@@ -91,7 +69,8 @@ func initLocation(){
         locationManager.distanceFilter = 1000
         locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
-    
+        loadingIndicator.isHidden = false
+        loadingIndicator.startAnimating()
       
  
     
@@ -101,9 +80,9 @@ func initLocation(){
         print("not enabled")
         let alert = UIAlertController(title: "Location Services Disabled",
             message: "Please enable Location Services",
-            preferredStyle: UIAlertController.Style.alert)
+            preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "OK",
-                                          style: UIAlertAction.Style.default, handler: nil))
+            style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         
     }
@@ -114,14 +93,14 @@ func locationManager(_ manager: CLLocationManager, didUpdateLocations locations:
 
         if (location.horizontalAccuracy > 0) {
       
-        self.userLong = (location.coordinate.longitude)
+        
         self.userLat = (location.coordinate.latitude)
         //remove space silly
         self.userLocation = "\(location.coordinate.latitude),\(location.coordinate.longitude)"
-        //print(userLocation)
         getCurrentWeatherData(userLocation)
         locationManager.stopUpdatingLocation()
-
+        loadingIndicator.isHidden = true
+        loadingIndicator.stopAnimating()
             CLGeocoder().reverseGeocodeLocation(location, completionHandler: {(placemarks, error) -> Void in
 							
                 
@@ -151,12 +130,13 @@ func locationManager(_ manager: CLLocationManager, didFailWithError error: Error
         
         let alert = UIAlertController(title: "Denied",
             message: "Permission Denied, please enable location services",
-            preferredStyle: UIAlertController.Style.alert)
+            preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "OK",
             style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
         locationManager.stopUpdatingLocation()
-
+        loadingIndicator.isHidden = true
+        loadingIndicator.stopAnimating()
         
     }
 
@@ -167,25 +147,16 @@ func locationManager(_ manager: CLLocationManager, didFailWithError error: Error
             style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
         locationManager.stopUpdatingLocation()
-
+        loadingIndicator.isHidden = true
+        loadingIndicator.stopAnimating()
     
     
 }
-
-  
-
+    
     func getCurrentWeatherData(_ userLocation: String) -> Void
     {
-        var skyKey = ""
-        //should probably cache this
-        
-        
-        let path = Bundle.main.path(forResource: "keys", ofType: "plist")
-        let keys = NSDictionary(contentsOfFile: path!)
-        skyKey = keys!.object(forKey: "darkskykey") as! String
-        
-        let baseURL = URL(string: "https://api.darksky.net/forecast/\(skyKey)/")
-        
+        let baseURL = URL(string: "https://api.darksky.net/forecast/\(apiKey)/")
+        print(baseURL)
         let forecastURL = URL(string: (userLocation), relativeTo: baseURL)
         
         let sharedSession = URLSession.shared
@@ -205,23 +176,17 @@ func locationManager(_ manager: CLLocationManager, didFailWithError error: Error
             do {
                 let weatherDictionary  = try JSONSerialization.jsonObject(with: dataObject, options: []) as! NSDictionary
                 //print out the json response
-               // print(weatherDictionary)
+                print(weatherDictionary)
                 
                 let currentWeather = Current(weatherDictionary: weatherDictionary)
-               // print("Printing \(currentWeather)")
-            
+                print(currentWeather)
                 DispatchQueue.main.async {
                     // Update UI
-                    
-                    self.tempLabel.text = "\(Int(currentWeather.temperature!))"
-                    self.currentSummary.text = "\(currentWeather.todaySummary!)"
-                  
-                 
+                    if let currentWeather.temperature
+                    self.tempLabel.text = "\(String(describing: currentWeather.temperature))"
                     self.iconView.image = currentWeather.icon!
-                    self.currentTimeLabel.text = "\(currentWeather.currentTime!)"
+                    self.currentTimeLabel.text = "At \(currentWeather.currentTime!) is"
                     
-                    
-                    /*
                     switch currentWeather.ozone {
                     case 0...50:
                         print("Nice")
@@ -251,7 +216,6 @@ func locationManager(_ manager: CLLocationManager, didFailWithError error: Error
                         print("blah")
                     }
                     print(currentWeather.ozone)
-                    */
                 }
                 
             
@@ -263,35 +227,12 @@ func locationManager(_ manager: CLLocationManager, didFailWithError error: Error
             }
         }
         task.resume()
-     
+        loadingIndicator.isHidden = false
+        loadingIndicator.startAnimating()
     }
 
     
     //end function
-    
-    
-    func registerMessage() {
-        
-        let center = UNUserNotificationCenter.current()
-        center.requestAuthorization(options: [.alert, .sound, .badge]) { (granted, error) in
-            // Enable or disable features based on authorization.
-            
-            if granted {
-                print("Granted")
-            }else {
-                print("No")
-            }
-
-        }
-    }
-    
-    func scheduleMessage() {
-        
-    }
-    
-    //Change Background Image depending on temp
-    //
-    //Add Things to Do according to temp
 }
 
 

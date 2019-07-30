@@ -2,13 +2,12 @@
 //  current.swift
 //  Flat Weather
 //
-//  Created by Erica Roy on 03/23/18.
-//  Copyright (c) 2018 Erica Roy. All rights reserved.
+//  Created by Erica Roy on 11/22/14.
+//  Copyright (c) 2014 Erica Roy. All rights reserved.
 //
 
 import Foundation
 import UIKit
-
 
 struct Current {
     
@@ -16,30 +15,16 @@ struct Current {
     var temperature: Float?
 	var currentAlert : String?
     var icon: UIImage?
-    var ozone: Float
-    var uvindex: Int
-    var todaySummary: String?
-
+    var ozone: Int
 
    
     
     init(weatherDictionary: NSDictionary){
 			
         let currentWeather: NSDictionary = weatherDictionary["currently"] as! NSDictionary
-        let value = weatherDictionary["daily"] as! NSDictionary
-        print((value["data"]! as! AnyObject).value(forKey:"summary"))
-        print(value["data"]! as! AnyObject)
-       
-            
-      
-        
         temperature = currentWeather["temperature"] as? Float
-        ozone = currentWeather["ozone"]as! Float
-        uvindex = currentWeather["uvIndex"] as! Int
-        todaySummary = currentWeather["summary"] as? String
-       
-    
-        
+        ozone = currentWeather["ozone"]as! Int
+        print(ozone)
         //icon = currentWeather["icon"] as String
         let currentTimeIntValue = currentWeather["time"] as! Int
         currentTime = dateStringFromUnixTime(unixTime: currentTimeIntValue)
@@ -90,9 +75,9 @@ struct Current {
 		switch stringIcon
 		{
 		case "clear-day":
-			imageName = "clear"
+			imageName = "clear-day"
 		case "clear-night":
-			imageName = "nt_clear"
+			imageName = "clear-night"
 		case "rain":
 			imageName = "rain"
 		case "snow":
@@ -106,9 +91,9 @@ struct Current {
 		case "cloudy":
 			imageName = "cloudy"
 		case "partly-cloudy-day":
-			imageName = "partlycloudy"
+			imageName = "partly-cloudy"
 		case "partly-cloudy-night":
-			imageName = "nt_partlycloudy"
+			imageName = "cloudy-night"
 		default:
 			imageName = "default"
 		
@@ -120,5 +105,7 @@ struct Current {
 		let iconName = UIImage(named: imageName)
 		return iconName!
 	}
+
+
 
 }
